@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-//const props = defineProps(["onNewItem"]);
 const text = ref('')
 const emits = defineEmits(['onNewItem'])
 
