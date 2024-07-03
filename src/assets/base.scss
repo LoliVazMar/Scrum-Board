@@ -67,7 +67,8 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: rgb(87, 32, 126);
-  background: linear-gradient(120deg, rgba(87, 32, 126, 1) 53%, rgba(210, 83, 47, 1) 100%);
+  background: linear-gradient(150deg, rgba(87, 32, 126, 1) 53%, rgba(210, 83, 47, 1) 100%);
+  background-size: 180% 180%;
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -75,6 +76,17 @@ body {
   font-family: 'Urbanist', sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
